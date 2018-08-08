@@ -9,7 +9,7 @@
             "command": "gcc",
             "args": [
                 "-g",
-                "vc_pt.c",
+                "test.c",
                 "-o",
                 "Demo"
             ],

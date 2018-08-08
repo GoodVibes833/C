@@ -1,19 +1,17 @@
-#include <stdio.h>
+/**
+ * File              : vc_strlen.c
+ * Author            : Derrick Park
+ * Date              : Tue 31 Jul 21:09:04 2018
+ * Last Modified Date: Tue 31 Jul 21:09:04 2018
+ * Last Modified By  : Derrick Park
+ */
 
 int vc_strlen(char *str)
 {
-    int lenth = 1;
-    while (str[lenth] != '\0')
-    {
-        printf("3size is %d\n", lenth);
-        lenth++;
-    }
-    return lenth;
-}
+  int i;
 
-int main()
-{
-    char *str = "hellow";
-    vc_strlen(str);
-    return 0;
+  i = 0;
+  while (*str++ != '\0')
+    i++;
+  return i;
 }

@@ -1,18 +1,20 @@
 /* ************************************ */
 /*                                      */
-/* vc_print_alphabet.c                  */
+/* vc_print_reverse_alphabet.c          */
 /*                                      */
-/* By: Nagisa, Alex, Emre A             */
+/* By: Derrick                          */
 /*                                      */
 /* ************************************ */
+
 #include <stdio.h>
 
 void vc_print_reverse_alphabet(void)
 {
-    char ch;
+  char ltr;
 
-    for (ch = 'z'; ch >= 'a'; ch--)
-    {
-        putchar(ch);
-    }
+  ltr = 'z';
+  while (ltr >= 'a')
+    putchar(ltr--);
 }
+
+

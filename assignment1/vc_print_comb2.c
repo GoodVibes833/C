@@ -1,41 +1,38 @@
 /* ************************************ */
 /*                                      */
-/* vc_print_alphabet.c                  */
+/* vc_print_comb2.c                     */
 /*                                      */
-/* By: Nagisa, Alex, Emre A             */
+/* By: Derrick                          */
 /*                                      */
 /* ************************************ */
+
 #include <stdio.h>
 
-void vc_vc_print_comb2(void)
+void vc_print_comb2(void)
 {
-    int num1;
-    int num2;
-    int num3;
-    int num4;
+  int i;
+  int k;
 
-    for (num1 = 48; num1 <= 57; num1++)
+  i = 0;
+  k = 0;
+  while (i < 100)
+  {
+    k = i + 1;
+    while (k < 100)
     {
-        for (num2 = 48; num2 <= 57; num2++)
-        {
-            for (num3 = 48; num3 <= 57; num3++)
-            {
-
-                for (num4 = 49; num4 <= 57; num4++)
-                {
-                    if (num1 + num2 != num3 + num4)
-                    {
-                        putchar(num1);
-                        putchar(num2);
-                        putchar(' ');
-                        putchar(',');
-                        putchar(' ');
-                        putchar(num3);
-                        putchar(num4);
-                        putchar(' ');
-                    }
-                }
-            }
-        }
+      putchar(i / 10 + '0');
+      putchar(i % 10 + '0');
+      putchar(' ');
+      putchar(k / 10 + '0');
+      putchar(k % 10 + '0');
+      if ((i / 10 != 9) || (i % 10 != 8))
+      {
+        putchar(',');
+        putchar(' ');
+      }
+      k++;
     }
+    i++;
+  }
+  putchar('\n');
 }

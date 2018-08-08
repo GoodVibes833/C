@@ -1,25 +1,28 @@
-// vc_atoi
-// 1. all chars should nummeric - 0-9
-// 2.
+/**
+ * File              : vc_atoi.c
+ * Author            : Derrick Park
+ * Date              : Thu  2 Aug 22:12:42 2018
+ * Last Modified Date: Thu  2 Aug 22:12:42 2018
+ * Last Modified By  : Derrick Park
+ */
 
-#include <stdio.h>
 int vc_atoi(char *str)
 {
-    int lenth = 0;
-    while (str[lenth] != '\0')
-    {
-        int i = (str[lenth]);
-        lenth++;
-        printf("size is %d\n", lenth);
-        printf("value is %d\n", i);
-    }
+  int result;
+  int sign;
 
-    return lenth;
-}
-
-int main()
-{
-    char *str = "hello";
-    vc_atoi(str);
-    return 0;
+  result = 0;
+  sign = 1;
+  if (*str == '-')
+  {
+    sign = -1;
+    str++;
+  }
+  for (; *str != '\0'; str++)
+  {
+    if (*str < '0' || *str > '9')
+      return 0;
+    result = result * 10 + *str - '0';
+  }
+  return sign * result;
 }

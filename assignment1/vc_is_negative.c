@@ -1,26 +1,17 @@
 /* ************************************ */
 /*                                      */
-/* vc_print_alphabet.c                  */
+/* vc_is_negative.c                     */
 /*                                      */
-/* By: Nagisa, Alex, Emre A             */
+/* By: Derrick                          */
 /*                                      */
 /* ************************************ */
+
 #include <stdio.h>
 
 void vc_is_negative(int n)
 {
-    char str[100];
-
-    printf("Enter a value :");
-
-    gets(str);
-
-    if (str < 0)
-    {
-        putchar('N');
-    }
-    else if (str > 0)
-    {
-        putchar('P');
-    }
+  if (n < 0)
+    putchar('N');
+  else
+    putchar('P');
 }

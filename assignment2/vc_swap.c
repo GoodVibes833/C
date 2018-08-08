@@ -1,18 +1,16 @@
-#include <stdio.h>
+/**
+ * File              : vc_swap.c
+ * Author            : Derrick Park
+ * Date              : Tue 31 Jul 20:52:00 2018
+ * Last Modified Date: Tue 31 Jul 20:52:00 2018
+ * Last Modified By  : Derrick Park
+ */
 
 void vc_swap(int *a, int *b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-int main()
-{
-    int a = 10;
-    int b = 11;
-    vc_swap(&a, &b);
+  int tmp;
 
-    printf("%d\n", a);
-    printf("%d\n", b);
-    return 0;
+  tmp = *a;
+  *a = *b;
+  *b = tmp;
 }

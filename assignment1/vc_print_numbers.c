@@ -1,17 +1,18 @@
 /* ************************************ */
 /*                                      */
-/* vc_print_alphabet.c                  */
+/* vc_print_numbers.c                   */
 /*                                      */
-/* By: Nagisa, Alex, Emre A             */
+/* By: Derrick                          */
 /*                                      */
 /* ************************************ */
+
 #include <stdio.h>
 
 void vc_print_numbers(void)
 {
-    char ch;
-    for (ch = '0'; ch <= '9'; ch++)
-    {
-        putchar(ch);
-    }
+  char nbr;
+
+  nbr = '0';
+  while (nbr <= '9')
+    putchar(nbr++);
 }
