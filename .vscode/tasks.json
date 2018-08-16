@@ -9,7 +9,7 @@
             "command": "gcc",
             "args": [
                 "-g",
-                "test.c",
+                "vc_concat_params.c",
                 "-o",
                 "Demo"
             ],

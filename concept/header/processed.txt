@@ -1,0 +1,12 @@
+int multiply(int a, int b);
+
+
+
+int main(int argc, char const *argv[])
+{
+    /* code */
+    int result = multiply(10, 10);
+    int squared = ((10) * (10));
+    int max = ((10) > (20) ? (10) : (20));
+    return 0;
+}
